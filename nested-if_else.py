@@ -1,4 +1,4 @@
-# WAP to find the max,mid and min out of three numbers
+# WAP to find the max,mid and min out of three integers
 
 a=int(input("Enter any no."))
 b=int(input("Enter any no."))

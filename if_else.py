@@ -1,4 +1,4 @@
-# WAP to find the greatest number out of three numbers
+# WAP to find the greatest number out of three integers
 
 a=int(input("Enter any no."))
 b=int(input("Enter any no."))
