@@ -1,3 +1,5 @@
+# WAP to multiply two integers without using the * operator using while loop
+
 n1=int(input("Enter first no. :"))
 n2=int(input("Enter second no. :"))
 product=0
