@@ -1,49 +1,103 @@
-# WAP to calculate the electricity bill based on the
+# 1. WAP to calculate the electricity bill based on the
 # following rules:
-# Units <= 100 -- 2rupees/unit
-# Units 101-200 -- 3rupees/unit
-# Units >200 -- 5rupees/unit
-# INPUT: Total units consumed
-# OUTPUT: Total electricity bill
+# Units <= 100 -- 2 rupees/unit
+# Units 101-200 -- 3 rupees/unit
+# Units >200 -- 5 rupees/unit
+# INPUT: 150
+# OUTPUT: Total electricity bill : 350
 
-# bill=0
-# units=int(input("Enter the total units consumed : "))
-# if units<=100:
-#     bill=units*2
-# elif units>100 and units<=200:
-#     bill=((units-100)*3)+200
-# elif units>200:
-#     bill=((units-200)*5)+500
-# print("Total electricity bill : ",bill)
+bill=0
+units=int(input("Enter the total units consumed : "))
+if units==0:
+    print("Invalid input!")
+if units<=100:
+    bill=units*2
+elif units>100 and units<=200:
+    bill=((units-100)*3)+200
+elif units>200:
+    bill=((units-200)*5)+500
+print("Total electricity bill : ",bill)
 
 #-----------------------------------------------------
 
-# WAP to input three sides of a triangle of and check
+# 2. WAP to input three sides of a triangle of and check
 # whether a triangle can be formed
-# INPUT: Three integers for sides of the triangle
-# OUTPUT: Print whether the triangle is valid or not
+# INPUT: 3
+#        4
+#        5
+# OUTPUT: This is a valid triangle
 
 s1=int(input("Enter 1st side of the triangle :"))
 s2=int(input("Enter 2nd side of the triangle :"))
 s3=int(input("Enter 3rd side of the triangle :"))
-if s1 or s2 or s3 ==0:
+if s1==0 or s2==0 or s3==0:
     print("Invalid input!")
-elif s1+s2>s3:
-    print("This is a valid triangle")
-elif s1+s3>s2:
-    print("This is a valid triangle")
-elif s2+s3>s1:
+elif (s1+s2>s3) and (s1+s3>s2) and (s2+s3>s1):
     print("This is a valid triangle")
 else:
-    print("This is not a valid triangle")
+    print("This is an invalid triangle")
 
+#----------------------------------------------------------
 
+# 3. WAP to input a single character and check whether it is :
+# -Uppercase
+# -Lowercase
+# -Digit
+# -Special character
+# INPUT: A
+# OUTPUT: Uppercase
 
+char=input("Enter a single character : ")
+if char.isupper():
+    print("Uppercase")
+elif char.islower():
+    print("Lowercase")
+elif char.isdigit():
+    print("Digit")
+else:
+    print("Special character")
 
+#--------------------------------------------------------------
 
+# 4. WAP to find the sum of all even numbers from 1 to n
+# INPUT: 10
+# OUTPUT: Sum of even numbers = 30
 
+n=int(input("Enter number till you wamt to sum : "))
+lst=list(range(2,n+1,2))
+print("Sum of even numbers = ",sum(lst))
 
+#--------------------------------------------------------------
 
+# 5. WAP to count the number of digits in a given number
+# INPUT: 4567
+# OUTPUT: Number of digits = 4
 
+numb=input("Enter any integer number : ")
+print("Number of digits = ",len(numb))
 
+#--------------------------------------------------------------
+
+# 6. WAP to reverse a given number
+# INPUT: 1234
+# OUTPUT: Reverse number = 4321
+
+n=int(input("Enter any integer number : "))
+st=str(n)
+new=int(st[::-1])
+print("Reverse number = ",new)
+
+n=int(input("Enter any integer number : "))
+rev=0
+for i in range(len(str(n))):
+    rev=(rev*10)+(n%10)
+    n=n//10
+print("Reverse number = ",rev)
+
+#--------------------------------------------------------------
+
+# 7. WAP to check whether a given number is a palindrome.
+# A palindrome number remains the same when reversed.
+# INPUT: 121
+# OUTPUT: Palidrome number
 
