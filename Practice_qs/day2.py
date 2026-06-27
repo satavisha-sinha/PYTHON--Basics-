@@ -20,14 +20,17 @@
 
 import math
 num=int(input("Enter a number : "))
-prime= True
+Prime=True
 if num<=1:
-    prime= False
+    Prime=False
+if num%2==0:
+    Prime=False
 else:  
     for i in range(2,int(math.sqrt(num))+1):
         if num%i==0:
-            print("Not Prime")
+            Prime=False
             break
-    else:
+    if Prime:
         print("Prime")
-
+    else:
+        print("Not Prime")
