@@ -25,4 +25,4 @@ def rgt_tri_num():
 
 # sqr_stars()
 # rgt_tri_star()
-rgt_tri_num()
+# rgt_tri_num()

@@ -6,17 +6,18 @@
 # INPUT: 150
 # OUTPUT: Total electricity bill : 350
 
-bill=0
-units=int(input("Enter the total units consumed : "))
-if units==0:
-    print("Invalid input!")
-if units<=100:
-    bill=units*2
-elif units>100 and units<=200:
-    bill=((units-100)*3)+200
-elif units>200:
-    bill=((units-200)*5)+500
-print("Total electricity bill : ",bill)
+def find_bill():
+    bill=0
+    units=int(input("Enter the total units consumed : "))
+    if units==0:
+        print("Invalid input!")
+    if units<=100:
+        bill=units*2
+    elif units>100 and units<=200:
+        bill=((units-100)*3)+200
+    elif units>200:
+        bill=((units-200)*5)+500
+    print("Total electricity bill : ",bill)
 
 #-----------------------------------------------------
 
@@ -27,15 +28,16 @@ print("Total electricity bill : ",bill)
 #        5
 # OUTPUT: This is a valid triangle
 
-s1=int(input("Enter 1st side of the triangle :"))
-s2=int(input("Enter 2nd side of the triangle :"))
-s3=int(input("Enter 3rd side of the triangle :"))
-if s1==0 or s2==0 or s3==0:
-    print("Invalid input!")
-elif (s1+s2>s3) and (s1+s3>s2) and (s2+s3>s1):
-    print("This is a valid triangle")
-else:
-    print("This is an invalid triangle")
+def check_triangle():
+    s1=int(input("Enter 1st side of the triangle :"))
+    s2=int(input("Enter 2nd side of the triangle :"))
+    s3=int(input("Enter 3rd side of the triangle :"))
+    if s1==0 or s2==0 or s3==0:
+        print("Invalid input!")
+    elif (s1+s2>s3) and (s1+s3>s2) and (s2+s3>s1):
+        print("This is a valid triangle")
+    else:
+        print("This is an invalid triangle")
 
 #----------------------------------------------------------
 
@@ -47,15 +49,16 @@ else:
 # INPUT: A
 # OUTPUT: Uppercase
 
-char=input("Enter a single character : ")
-if char.isupper():
-    print("Uppercase")
-elif char.islower():
-    print("Lowercase")
-elif char.isdigit():
-    print("Digit")
-else:
-    print("Special character")
+def check_character():
+    char=input("Enter a single character : ")
+    if char.isupper():
+        print("Uppercase")
+    elif char.islower():
+        print("Lowercase")
+    elif char.isdigit():
+        print("Digit")
+    else:
+        print("Special character")
 
 #--------------------------------------------------------------
 
@@ -63,9 +66,10 @@ else:
 # INPUT: 10
 # OUTPUT: Sum of even numbers = 30
 
-n=int(input("Enter number till you wamt to sum : "))
-lst=list(range(2,n+1,2))
-print("Sum of even numbers = ",sum(lst))
+def sum_even_num():
+    n=int(input("Enter number till you wamt to sum : "))
+    lst=list(range(2,n+1,2))
+    print("Sum of even numbers = ",sum(lst))
 
 #--------------------------------------------------------------
 
@@ -73,8 +77,9 @@ print("Sum of even numbers = ",sum(lst))
 # INPUT: 4567
 # OUTPUT: Number of digits = 4
 
-numb=input("Enter any integer number : ")
-print("Number of digits = ",len(numb))
+def count_digit():
+    numb=input("Enter any integer number : ")
+    print("Number of digits = ",len(numb))
 
 #--------------------------------------------------------------
 
@@ -82,17 +87,18 @@ print("Number of digits = ",len(numb))
 # INPUT: 1234
 # OUTPUT: Reverse number = 4321
 
-n=int(input("Enter any integer number : "))
-st=str(n)
-new=int(st[::-1])
-print("Reverse number = ",new)
+def rev_num():
+    n=int(input("Enter any integer number : "))
+    st=str(n)
+    new=int(st[::-1])
+    print("Reverse number = ",new)
 
-n=int(input("Enter any integer number : "))
-rev=0
-for i in range(len(str(n))):
-    rev=(rev*10)+(n%10)
-    n=n//10
-print("Reverse number = ",rev)
+    n=int(input("Enter any integer number : "))
+    rev=0
+    for i in range(len(str(n))):
+        rev=(rev*10)+(n%10)
+        n=n//10
+    print("Reverse number = ",rev)
 
 #--------------------------------------------------------------
 
@@ -100,4 +106,16 @@ print("Reverse number = ",rev)
 # A palindrome number remains the same when reversed.
 # INPUT: 121
 # OUTPUT: Palidrome number
+
+n=int(input("Enter the no you want to check : "))
+rev=0
+original=n
+for i in range(len(str(n))):
+    rev=rev*10+(n%10)
+    n=n//10
+if rev==original:
+    print("Yes the number ",rev," is palindrome")
+else:
+    print("No the number ",rev," is not palindrome")
+
 
