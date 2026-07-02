@@ -107,15 +107,22 @@ def rev_num():
 # INPUT: 121
 # OUTPUT: Palidrome number
 
-n=int(input("Enter the no you want to check : "))
-rev=0
-original=n
-for i in range(len(str(n))):
-    rev=rev*10+(n%10)
-    n=n//10
-if rev==original:
-    print("Yes the number ",rev," is palindrome")
-else:
-    print("No the number ",rev," is not palindrome")
+def check_palindrome():
+    n=int(input("Enter the no you want to check : "))
+    rev=0
+    org=n
+    for i in range(len(str(n))):
+        rev=rev*10+(n%10)
+        n=n//10
+    if rev==org:
+        print("Yes the number ",rev," is palindrome")
+    else:
+        print("No the number ",rev," is not palindrome")
 
-
+# find_bill()
+# check_triangle()
+# check_character()
+# sum_even_num()
+# count_digit()
+# rev_num()
+# check_palindrome()
