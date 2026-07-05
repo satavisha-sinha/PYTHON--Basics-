@@ -38,7 +38,6 @@ def find_prime():
         else:
             print("Not Prime")
 
-
 # multiply_table(3)
 # count_digit(1234)
-find_prime()           
+# find_prime()           
