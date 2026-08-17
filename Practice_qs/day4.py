@@ -20,9 +20,17 @@
 # 3.Write a code to detect doouble space in a string.
 
 # st="This is a  string "
+
 # print(st.find("  "))
 
 # # 4. Write a code to replace the double space in string in problem 3.
 
 # print(st.replace("  "," ")) string are immutable the changes do not occur in original str.
 
+# Write a program to format the following letter using escape sequence.
+
+letter="Dear Satavisha, Congratulation !, you are selected for this course."
+print(letter)
+
+new_letter="Dear Satavisha,\nCongratulation !,\n\tYou are selected for this course."
+print(new_letter)
